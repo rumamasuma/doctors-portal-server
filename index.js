@@ -12,8 +12,8 @@ const port = process.env.PORT || 5000;
 
 // firebase admin
 
-const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
-// const serviceAccount = require('./doctors-portal-firebase-adminsdk.json');
+// const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+const serviceAccount = require('./doctors-portal-firebase-adminsdk.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
